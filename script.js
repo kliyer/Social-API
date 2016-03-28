@@ -11,7 +11,7 @@ $(document).ready(function (){
 	function(data){
 		$.each(data.items,function(i,item){
 		console.log(item);
-		var pid = item.snippet.resourceId.videoId;
+		var pid = item.id;
 		output = '<li><iframe src=\"//www.youtube.com/embed/'+pid+'\"</li>';
 		$('#results').append(output);
 		})
