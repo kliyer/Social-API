@@ -10,7 +10,9 @@ $(document).ready(function (){
 		$.each(data.items,function(i,item){
 		console.log(item);
 		var pid = item.id;
-		output = '<li><iframe src=\"//www.youtube.com/embed/'+pid+'\"</li>';
+		output = '<li><a class="twitter-share-button"
+  href="https://twitter.com/intent/tweet">
+Tweet</a><iframe src=\"//www.youtube.com/embed/'+pid+'\"</li>';
 		$('#results').append(output);
 		})
 	}
