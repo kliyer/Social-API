@@ -2,17 +2,32 @@ var channelName = 'TechGuyWeb';
 
 
 $(document).ready(function (){
-	
-		getVids();
-		});
-
-
-function getVids(){
 	$.get(
-	"https://developers.google.com/youtube/v3/videos",{
+	"https://www.googleapis.com/youtube/v3/channels",{
+	part:'contentDetails',
+	forUsername: channelName,
+	key:'AIzaSyAa1rfPGIPa7_LYPXkvPeE_5AIxwUgBHhE'},
+	function(data){
+		$.each(data.items,function(i,item){
+		console.log(item);
+		var pid = item.contentDetails.relatedPlaylists.uploads;
+		getVids(pid);
+		})
+
+	}
+
+
+	);
+
+
+
+});
+function getVids(pid){
+	$.get(
+	"https://www.googleapis.com/youtube/v3/playlistItems",{
 	part:'snippet',
-	chart:'mostPopular',
-	regionCode:'us',
+	playlistId: pid,
+	maxResults:10,
 	key:'AIzaSyAa1rfPGIPa7_LYPXkvPeE_5AIxwUgBHhE'},
 	function(data){
 		var output;
