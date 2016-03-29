@@ -11,6 +11,9 @@
 
 
 		}
+			fieldset {
+    		border: 0;
+		}
 		#container {
 			width:800px;
 			margin:auto;
@@ -19,6 +22,65 @@
 			padding:15px;
 
 		}
+		 #search-text-input{
+            border-top:thin solid  #e5e5e5;
+            border-right:thin solid #e5e5e5;
+            border-bottom:0;
+            border-left:thin solid  #e5e5e5;
+            box-shadow:0px 1px 1px 1px #e5e5e5;
+            float:left;
+            height:17px;
+            margin:.8em 0 0 .5em; 
+            outline:0;
+            padding:.4em 0 .4em .6em; 
+            width:350px; 
+        }
+         
+        #search{
+            background-color:#4099ff;
+            border-top:thin solid #e5e5e5;
+            box-shadow:1px 1px 1px 1px #e5e5e5;
+            cursor:pointer;
+            float:left;
+            height:28px;
+            margin:11px 0 0 0;
+            text-align:center;
+            color:#ffffff;
+            width:40px;
+        }
+         
+		.tweetbutton {
+					  inherit: none;
+					  height: 16px;
+					  display: inline-block;
+					  border-radius: 3px;
+					  -moz-border-radius: 3px;
+					  -webkit-border-radius: 3px;
+					  /* gradient background -- thanks http://ie.microsoft.com/testdrive/graphics/cssgradientbackgroundmaker/ */
+					background: url('https://si0.twimg.com/images/dev/cms/intents/bird/bird_blue/bird_16_blue.png') no-repeat 2px 1px, -ms-linear-gradient(top, #FEFEFE 0%, #DFDFDF 100%);
+					background: url('https://si0.twimg.com/images/dev/cms/intents/bird/bird_blue/bird_16_blue.png') no-repeat 2px 1px, -moz-linear-gradient(top, #FEFEFE 0%, #DFDFDF 100%);
+					background: url('https://si0.twimg.com/images/dev/cms/intents/bird/bird_blue/bird_16_blue.png') no-repeat 2px 1px, -o-linear-gradient(top, #FEFEFE 0%, #DFDFDF 100%);
+					background: url('https://si0.twimg.com/images/dev/cms/intents/bird/bird_blue/bird_16_blue.png') no-repeat 2px 1px, -webkit-gradient(linear, left top, left bottom, color-stop(0, #FEFEFE), color-stop(1, #DFDFDF));
+					background: url('https://si0.twimg.com/images/dev/cms/intents/bird/bird_blue/bird_16_blue.png') no-repeat 2px 1px, -webkit-linear-gradient(top, #FEFEFE 0%, #DFDFDF 100%);
+					  border: 1px solid #cccccc;
+					  padding-left: 22px;
+					  padding-right: 4px;
+					  padding-top: 2px;
+					  
+					  font-weight: bold;
+					  font-size: 0.7em;
+					  font-family: Arial;
+					  
+					  color: #333333;
+					  text-decoration: none;
+					}
+					.tweetbutton:hover {
+						background: url('https://si0.twimg.com/images/dev/cms/intents/bird/bird_blue/bird_16_blue.png') no-repeat 2px 1px, -ms-linear-gradient(top, #f7f7f7 0%, #d9d9d9 100%);
+					background: url('https://si0.twimg.com/images/dev/cms/intents/bird/bird_blue/bird_16_blue.png') no-repeat 2px 1px, -moz-linear-gradient(top, #f7f7f7 0%, #d9d9d9 100%);
+					background: url('https://si0.twimg.com/images/dev/cms/intents/bird/bird_blue/bird_16_blue.png') no-repeat 2px 1px, -o-linear-gradient(top, #f7f7f7 0%, #d9d9d9 100%);
+					background: url('https://si0.twimg.com/images/dev/cms/intents/bird/bird_blue/bird_16_blue.png') no-repeat 2px 1px, -webkit-gradient(linear, left top, left bottom, color-stop(0, #f7f7f7), color-stop(1, #d9d9d9));
+					background: url('https://si0.twimg.com/images/dev/cms/intents/bird/bird_blue/bird_16_blue.png') no-repeat 2px 1px, -webkit-linear-gradient(top, #f7f7f7 0%, #d9d9d9 100%);
+}
 
 		</style>
 		<script src='jquery-1.12.2.min.js'></script>
@@ -26,9 +88,16 @@
 
 		</head>
 		<body>
+				<form action="#">
 				<div id="container">
 						<h1>Youtube Videos</h1>
+					    <fieldset>
+					    <input type='text' placeholder='Search...' id='search-text-input' />
+						<input type='submit'value='Go' id='search'/>
+						</fieldset>
+
 						<ul id="results"></ul>
 				</div>
+				</form>
 		</body>
 	</html>		
