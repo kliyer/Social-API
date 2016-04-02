@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-	<title>Youtube Channel Vids</title>
+	<title>Popular Youtube / Twitter Feed</title>
 
     <link rel="stylesheet" type="text/css" href="reset.css">
 	<link rel="stylesheet" type="text/css" href="style.css">
@@ -14,13 +14,19 @@
     <body>
 		<form id="searchForm"action="#">
 		<div id="container">
-				<h1>Popular Youtube Videos</h1>
+				<h1>Popular Youtube / Twitter Feed</h1>
 			    <fieldset class="search-form">
 			       <input type='text' placeholder='Search...' id='search-text-input' />
 				  <input type='submit'value='Go' id='search'/>
 				</fieldset>
 
-				<ul id="yt-results"></ul>
+				<div class="yt-twit-container">
+
+					<ul id="yt-results"></ul>
+
+					<ul id="twit-results"></ul>
+
+				</div>
 		</div>
 		</form>
 	</body>

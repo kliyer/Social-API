@@ -20,6 +20,25 @@ $(document).ready(function (){
 				output += '</li>';				
 				$('#yt-results').append(output);
 			});
+
+			var titles = data.items[0].snippet.title
+
+			$.get(
+				"tweets",{
+					q:encodeURIComponent(titles).replace(/%20/g,"+")
+				},
+				
+				function(data){
+					var output = "";
+					$.each(data, function(i,item){
+						output = '<li class="erase">';
+						output += item;
+						output += '</li>';				
+						$('#twit-results').append(output);
+					});
+				}
+			);
+
 		}
 	);
 
@@ -47,6 +66,26 @@ $(document).ready(function (){
 				});
 			}
 		);
+
+
+
+		$.get(
+			"tweets",{
+				q:encodeURIComponent($("#search-text-input").val()).replace(/%20/g,"+")
+			},
+			
+			function(data){
+				var output = "";
+				$.each(data, function(i,item){
+					output = '<li class="erase">';
+					output += item;
+					output += '</li>';				
+					$('#twit-results').append(output);
+				});
+			}
+		);
+
+
 		return false;
        
     });
