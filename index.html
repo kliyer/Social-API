@@ -1,34 +1,34 @@
 <!DOCTYPE html>
 <html>
-		<head>
-		<title> Youtube Channel Vids </title>
-		<style>
-		body{
-			background:#f4f4f4;
-			font-family:"Arial",san-serif;
-			font-size:14px;
-			color:#666;
+	<head>
+	<title>Popular Youtube / Twitter Feed</title>
 
+    <link rel="stylesheet" type="text/css" href="reset.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
 
-		}
-		#container {
-			width:800px;
-			margin:auto;
-			overflow:auto;
-			background:#fff;
-			padding:15px;
+	
 
-		}
+    <script src='jquery-1.12.2.min.js'></script>
+    <script src='script.js'></script>
+	</head>
+    <body>
+		<form id="searchForm"action="#">
+		<div id="container">
+				<h1>Popular Youtube / Twitter Feed</h1>
+			    <fieldset class="search-form">
+			       <input type='text' placeholder='Search...' id='search-text-input' />
+				  <input type='submit'value='Go' id='search'/>
+				</fieldset>
 
-		</style>
-		<script src='jquery-1.12.2.min.js'></script>
-		<script src='script.js'></script>
+				<div class="yt-twit-container">
 
-		</head>
-		<body>
-				<div id="container">
-						<h1>Youtube Videos</h1>
-						<ul id="results"></ul>
+					<ul id="yt-results"></ul>
+
+					<ul id="twit-results"></ul>
+
 				</div>
-		</body>
-	</html>		
+		</div>
+		</form>
+	</body>
+
+</html>		

@@ -1,0 +1,125 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    background:#f4f4f4;
+    font-family:"Arial",san-serif;
+    font-size:14px;
+    color:#666;
+}
+
+fieldset {
+    border: 0;
+}
+
+#container {
+    width:90%;
+    margin:auto;
+    overflow: hidden;
+    background:#fff;
+    padding:15px;
+}
+
+.yt-twit-container {
+    overflow: hidden;
+}
+
+#yt-results li {
+    float: left;
+    width: 30%; 
+    margin-right: 5%;
+    margin-top: 20px;
+}
+
+#yt-results li:nth-child(3n) {
+    margin-right: 0;
+}
+
+#yt-results li iframe {
+    width: 100%;
+}
+
+.search-form {
+    position: relative;
+}
+
+#search-text-input{
+    border:1px solid  #e5e5e5;
+    float:left;
+    margin:.8em 0 0 0; 
+    outline:0;
+    padding: .5em 0 .5em .6em; 
+    width: 100%; 
+}
+
+#search {
+    background-color:#4099ff;
+    cursor:pointer;
+    float:left;
+    height: 30px;
+    border: none;
+    margin:11px 0 0 0;
+    text-align:center;
+    color: #ffffff;
+    width: 40px;
+    position: absolute;
+    right: 0;
+}
+
+.tweetbutton {
+    inherit: none;
+    height: 16px;
+    display: inline-block;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    /* gradient background -- thanks http://ie.microsoft.com/testdrive/graphics/cssgradientbackgroundmaker/ */
+    background: url('https://si0.twimg.com/images/dev/cms/intents/bird/bird_blue/bird_16_blue.png') no-repeat 2px 1px, -ms-linear-gradient(top, #FEFEFE 0%, #DFDFDF 100%);
+    background: url('https://si0.twimg.com/images/dev/cms/intents/bird/bird_blue/bird_16_blue.png') no-repeat 2px 1px, -moz-linear-gradient(top, #FEFEFE 0%, #DFDFDF 100%);
+    background: url('https://si0.twimg.com/images/dev/cms/intents/bird/bird_blue/bird_16_blue.png') no-repeat 2px 1px, -o-linear-gradient(top, #FEFEFE 0%, #DFDFDF 100%);
+    background: url('https://si0.twimg.com/images/dev/cms/intents/bird/bird_blue/bird_16_blue.png') no-repeat 2px 1px, -webkit-gradient(linear, left top, left bottom, color-stop(0, #FEFEFE), color-stop(1, #DFDFDF));
+    background: url('https://si0.twimg.com/images/dev/cms/intents/bird/bird_blue/bird_16_blue.png') no-repeat 2px 1px, -webkit-linear-gradient(top, #FEFEFE 0%, #DFDFDF 100%);
+    border: 1px solid #cccccc;
+    padding-left: 22px;
+    padding-right: 4px;
+    padding-top: 2px;
+
+    margin-bottom: 5px;
+
+    font-weight: bold;
+    font-size: 0.7em;
+    font-family: Arial;
+
+    color: #333333;
+    text-decoration: none;
+}
+.tweetbutton:hover {
+    background: url('https://si0.twimg.com/images/dev/cms/intents/bird/bird_blue/bird_16_blue.png') no-repeat 2px 1px, -ms-linear-gradient(top, #f7f7f7 0%, #d9d9d9 100%);
+    background: url('https://si0.twimg.com/images/dev/cms/intents/bird/bird_blue/bird_16_blue.png') no-repeat 2px 1px, -moz-linear-gradient(top, #f7f7f7 0%, #d9d9d9 100%);
+    background: url('https://si0.twimg.com/images/dev/cms/intents/bird/bird_blue/bird_16_blue.png') no-repeat 2px 1px, -o-linear-gradient(top, #f7f7f7 0%, #d9d9d9 100%);
+    background: url('https://si0.twimg.com/images/dev/cms/intents/bird/bird_blue/bird_16_blue.png') no-repeat 2px 1px, -webkit-gradient(linear, left top, left bottom, color-stop(0, #f7f7f7), color-stop(1, #d9d9d9));
+    background: url('https://si0.twimg.com/images/dev/cms/intents/bird/bird_blue/bird_16_blue.png') no-repeat 2px 1px, -webkit-linear-gradient(top, #f7f7f7 0%, #d9d9d9 100%);
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#yt-results {
+    width: 65%;
+    float: left;
+}
+
+#twit-results {
+    width: 30%;
+    float: right;
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+#twit-results li {
+    list-style-type: disc; 
+    margin: 10px 0;   
+}
